@@ -1,0 +1,102 @@
+section {
+	
+	width:100%;
+	//min-height:100%;
+	position:absolute !important;
+	top:0;
+}
+
+.section {
+	//display:none;
+}
+
+.main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+	margin:0;
+	padding:0;
+	max-width:100%;
+	width:100%;
+	min-height:100%;
+}
+
+.section.flex {
+    display: inline-block;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.scroll-container {
+	overflow-y:scroll;
+	-webkit-overflow-scrolling: touch;
+	height:100%;
+	overflow-x:hidden;
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+}
+
+.one-page-content {
+	padding-top:80px;
+	
+	@include break(ipad) { 
+	    padding-top:80px;
+	}
+	
+	@include break(laptop) { 
+	   padding-top:127px;
+	} 
+
+	@include break(desktop) { 
+	    padding-top:127px;
+	} 
+	
+	content {
+		margin-bottom:70px;
+	}
+	 
+	.page-content {
+	    position: absolute;
+	    width: 100%;
+	    top: 120px;
+	    padding-bottom: 40px;
+	}
+}
+
+
+
+
+
+
+.fixed-panel {
+	position:absolute;
+	height:100%;
+	left:0;
+	top:0;
+}
+
+.section-active .fixed-panel {
+
+}
+
+.offset-panel {
+	margin-left:40%;
+}
+
+.sub-section {
+	display:none;
+}
+
+.sub-section.hidden {
+	visibility:hidden;
+}
+
+.sub-section.flex {
+    display: inline-block;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}

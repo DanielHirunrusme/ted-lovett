@@ -1,0 +1,55 @@
+.blog-video-container {
+	
+	@include transition(.5s height);
+	
+	height:0;
+	
+	@include respond-to {
+		//display:none;
+	}
+	
+}
+
+#body-products, .template-product {
+	.blog-video-container {
+		height:0;
+	}
+}
+
+.show-video {
+	
+	.blog-video-container {
+		
+		height:100%;
+		
+	}
+	
+}
+
+.homepage-video {
+	@include respond-to {
+		display:none;
+	}
+}
+
+.mobile-background-container {
+	display:none;
+	
+	@include respond-to {
+		display:block;
+	}
+}
+
+#mobile-bg {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100vh;
+	background-size:cover;
+	display:none;
+	
+	@include respond-to {
+		display:block;
+	}
+}

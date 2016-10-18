@@ -1,0 +1,7 @@
+button:focus, button:active, button:hover {
+	outline:none;
+}
+
+.btn, .btn--secondary, .rte .btn--secondary, .rte .btn, .rte .btn--secondary {
+	border-radius:0;
+}

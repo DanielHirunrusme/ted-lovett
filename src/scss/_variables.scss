@@ -1,0 +1,111 @@
+//global
+$g-size:13px;
+$g-laptop-size:11px;
+$g-phone-size:12px;
+$g-mobileonly-size:4vw;
+$g-font:'akzidenz-m';
+
+//breakpoints
+$break-desktop:1441px;
+$break-laptop:1440px;
+$break-ipad:1000px;
+$break-phone:767px;
+
+//animation
+$nav-transition-duration:1s;
+$transition-duration:.4s;
+$zoom-transition-duration:1.2s;
+$transition-timing-function: ease-out;
+$animation-speed: 0.2s;
+
+//gutters+margins
+$padding:20px;
+
+$g-lr-margin:2vw;
+$g-tb-margin:3vh;
+
+$g-padding-v:10%;
+$g-padding-h:10%;
+
+$g-h-padding:5vw;
+$g-v-padding:4vh;
+
+//colors
+$c-white:#ffffff;
+$c-black:#000000; 
+$c-background:rgb(211,186,222);
+$c-background-search:#e5e5e5;
+$c-gray:#687063;
+$c-dark-gray:#282924;
+$c-orange:#BF6A49;
+$c-overlay-blue:#092647;
+$c-deactivated-text:#919191;
+$c-global:$c-dark-gray;
+
+//font sizes
+$f-global-size:2.4vw;
+$f-line-height:1.25;
+
+$f-global-size-sm:1.675vw;
+
+$f-tablet-size:1em;
+$f-mobileonly-size:3em;
+
+
+$f-name-mobileonly-size:7em;
+
+
+$p-font-sizes: (
+  null  : $f-global-size,
+  $break-ipad : $f-global-size,
+  $break-laptop : $f-global-size,
+  $break-desktop: $f-global-size
+);
+
+$p-line-height: (
+  null  : $f-line-height,
+  $break-ipad : $f-line-height,
+  $break-laptop : $f-line-height,
+  $break-desktop: $f-line-height
+);
+
+$h1-sizes: (
+  null  : 24px,
+  $break-ipad : 24px,
+  $break-laptop : 24px,
+  $break-desktop: 29px
+);
+
+$h1-line-height: (
+  null  : 30px,
+  $break-ipad : 30px,
+  $break-laptop : 30px,
+  $break-desktop: 35px
+);
+
+@mixin line-height($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      line-height: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-font-size;
+      }
+    }
+  }
+}
+
+//breakpoints
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}

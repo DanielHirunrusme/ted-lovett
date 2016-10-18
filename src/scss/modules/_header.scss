@@ -1,0 +1,70 @@
+.main-header {
+	/*@include transition(.3s all);*/
+	position:fixed;
+	width:100%;
+	top:0px;
+	z-index:9999;
+	background:transparent;
+	padding:25px 0;
+	overflow:hidden;
+	
+	@include flexbox;
+	@include flex-direction(column);
+	
+	@include break(ipad) { 
+		position:fixed;
+		width:100%;
+		top:0;
+		z-index:9999;
+		padding:25px 0;
+		
+	} 
+	
+	@include break(laptop) { 
+		position:fixed;
+		width:100%;
+		top:0;
+		z-index:9999;
+		padding:25px 0;
+	} 
+
+	@include break(desktop) { 
+		position:fixed;
+		width:100%;
+		top:0;
+		z-index:9999;
+		padding:25px 0;
+	} 
+}
+
+.site-heaer {
+	z-index:9999;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.main-header:hover, .main-header.over, body.mobile .main-header {
+	background:#fff;
+}
+
+body.mobile .main-header {
+ height:50% !important;
+ min-height:400px;
+}
+
+.main-header.header-subsubmenu {
+	border-bottom:1px solid $c-orange;
+}
+
+.mobile .main-header {
+	display:none;
+}
+
+
+.logo {
+	span {
+		@include transition(0s color)
+	}
+}
+

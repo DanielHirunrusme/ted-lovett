@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'f';
+    src: url(f.eot);
+    src: url(f-0.eot#iefix) format("embedded-opentype"), url(f.woff2) format("woff2"), url(f.woff) format("woff"), url(f.ttf) format("truetype"), url(f.svg#folio_bqregular) format("svg");
+    font-weight: 700;
+    font-style: normal
+}
+
+%globalText {
+	
+	font-family:'f', Helvetica, Arial, sans-serif;
+	
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+	color:$c-black;
+}
+
+body {
+	@extend %globalText;
+	-webkit-font-smoothing:antialiased;
+	//text-shadow: 0px 0px 2px rgba(0, 0, 3, 0.6);
+	
+	@include respond-to {
+		font-size: 6vw;
+		line-height: 1.15;
+	}
+}
+
+b, strong {
+	font-weight:normal !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, select, input, label, textarea, span, time {
+	
+	letter-spacing: initial !important;
+	word-spacing:initial;
+}
+
+span, time, a {
+	word-spacing:initial;
+}
+
+a {
+	
+	color:$c-white;
+	text-decoration:none;
+	outline:none;
+	
+	&:hover {
+		color:$c-black;
+	}
+	
+	
+	
+} 
+
+.site-footer a {
+	color:#000;
+}
+
+a.disableAnimation {
+	@extend .notransition;
+}
+
+.disable-link {
+	pointer-events:none;
+}
+
+a, a:active, a:focus, input:focus {
+	outline: none !important;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $c-black;
+    background: $c-global;
+}
+
+::selection {
+    color: $c-global;
+    background: $c-black;
+}
+
+li {
+	list-style:none;
+}
+
+address {
+	font-style:normal; 
+}
+
+h1, h2, h3, h4, h5, h6, p, input, select {
+	font-weight:normal;	
+	color:$c-global;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'f';
+}
+
+ 
+p {
+
+	margin:0 auto;
+	
+	@extend %globalText;
+}
+
+p {
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+	
+	@include respond-to {
+		font-size: 6vw;
+		line-height: 1.15;
+	}
+}
+
+h1 {
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+	
+	@include respond-to {
+		font-size: 6vw;
+		line-height: 1.15;
+	}
+}
+
+%h1 {
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+	
+	@include respond-to {
+		font-size: 6vw;
+		line-height: 1.15;
+	}
+}
+
+h2 {
+	text-transform:uppercase;
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+	
+	@include respond-to {
+		font-size: 6vw;
+		line-height: 1.15;
+	}
+}
+
+
+hr {
+	border:none;
+	border-top:1px solid $c-dark-gray;
+}
+
+li {
+	line-height:1.5em;
+}
+
+
+.headerLabel {
+	margin-top:30px;
+}
+
+/*
+h1 {
+	font-size:25px;
+	line-height:27px;
+	
+	@include break(ipad) { 
+		font-size:2.30769em;
+		line-height:40px;
+	} 
+	
+	@include break(laptop) { 
+		font-size:2.30769em;
+		line-height:40px;
+	} 
+	
+	@include break(desktop) { 
+		font-size:2.30769em;
+		line-height:40px;
+	} 
+}
+*/
+
+
+/*
+h2 {
+	text-transform:uppercase;
+	font-size:17px;
+	line-height:26px;
+	
+	@include break(ipad) { 
+		font-size:17px;
+		line-height:26px;
+	} 
+	
+	@include break(laptop) { 
+		font-size:17px;
+		line-height:26px;
+	} 
+	
+	@include break(desktop) { 
+		font-size:25px;
+		line-height:33px;
+	} 
+}
+*/
+
+.center {
+	text-align:center;
+}
+
+.caps {
+	text-transform:uppercase;
+	letter-spacing:.15em !important;
+	
+	@include font-size($p-font-sizes); 
+	@include line-height($p-line-height); 
+}
+
+%small-caps {
+    font-variant: small-caps;
+    text-transform: lowercase;
+	letter-spacing: 1px !important;
+	
+	@include respond-to {
+		letter-spacing: 0px !important;
+	}
+}
+
+.mobile-break {
+	display:none !important;
+	@include break('small') {
+		display:block !important;
+	}
+}
+
