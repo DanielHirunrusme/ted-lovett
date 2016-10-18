@@ -23,7 +23,7 @@
 //templates
 @import "templates/index";
 @import "templates/blog";
-@import "templates/shop";
+
 /*
 @import "templates/title-screen";
 @import "templates/home";
@@ -33,18 +33,8 @@
 */
 
 //partials
-@import "partials/about-screen";
-@import "partials/menu";
-@import "partials/blog-header";
-@import "partials/collection-panel";
-@import "partials/homepage-video";
-//@import "partials/captions";
+//@import "partials/about-screen";
 //@import "partials/menu";
-//@import "partials/mobile-menu";
-/*
-@import "partials/main-menu";
-@import "partials/brand-menu";
-@import "partials/projects-menu";
-@import "partials/studio-menu";
-@import "partials/video";
-*/
+//@import "partials/blog-header";
+//@import "partials/collection-panel";
+//@import "partials/homepage-video";

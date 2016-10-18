@@ -26,7 +26,7 @@ gulp.task( "watchify", function() {
 function browserifyTask( dev, cb ) {
   var bundleOpts = {
     entries: "./src/js/main.js",
-    output: "././wp-content/themes/teddLovett-studio-agency/assets/js/main.min.js",
+    output: "./wp-content/themes/tedLovett-studio-agency/assets/js/main.min.js",
     transform: [ shim ],
     debug: true
   };

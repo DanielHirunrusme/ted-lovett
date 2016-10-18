@@ -23,7 +23,7 @@ gulp.task( "sass", function() {
     .pipe( sourcemaps.write( "./", {
       sourceRoot: "../../src/scss/"
     }) )
-    .pipe( gulp.dest( "./wp-content/themes/teddLovett-studio-agency/assets/css" ) );
+    .pipe( gulp.dest( "./wp-content/themes/tedLovett-studio-agency/assets/css" ) );
 });
 
 /**

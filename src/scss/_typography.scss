@@ -1,17 +1,9 @@
-@font-face {
-    font-family: 'f';
-    src: url(f.eot);
-    src: url(f-0.eot#iefix) format("embedded-opentype"), url(f.woff2) format("woff2"), url(f.woff) format("woff"), url(f.ttf) format("truetype"), url(f.svg#folio_bqregular) format("svg");
-    font-weight: 700;
-    font-style: normal
-}
-
 %globalText {
 	
-	font-family:'f', Helvetica, Arial, sans-serif;
+	font-family:'Calibre', Helvetica, Arial, sans-serif;
 	
-	@include font-size($p-font-sizes); 
-	@include line-height($p-line-height); 
+	//@include font-size($p-font-sizes); 
+	//@include line-height($p-line-height); 
 	color:$c-black;
 }
 
@@ -31,7 +23,7 @@ b, strong {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, select, input, label, textarea, span, time {
-	
+	@extend %globalText;
 	letter-spacing: initial !important;
 	word-spacing:initial;
 }
@@ -42,7 +34,7 @@ span, time, a {
 
 a {
 	
-	color:$c-white;
+	color:$c-black;
 	text-decoration:none;
 	outline:none;
 	
@@ -93,10 +85,6 @@ h1, h2, h3, h4, h5, h6, p, input, select {
 	color:$c-global;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'f';
-}
-
  
 p {
 
@@ -111,7 +99,7 @@ p {
 	
 	@include respond-to {
 		font-size: 6vw;
-		line-height: 1.15;
+		line-height: 1;
 	}
 }
 
@@ -142,7 +130,7 @@ h2 {
 	
 	@include respond-to {
 		font-size: 6vw;
-		line-height: 1.15;
+		line-height: 1;
 	}
 }
 
